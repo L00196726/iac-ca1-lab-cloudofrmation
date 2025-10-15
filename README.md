@@ -9,6 +9,17 @@ It is the Cloudformation definitions to create a RESTFull API backed by a Lambda
 2. Run this command:
 ```
 aws cloudformation deploy \
-  --template restfull_app.yml \
+  --template src/restfull_app.yml \
   --stack-name restapi-cloudformation --capabilities CAPABILITY_IAM
+```
+
+## How to test the application
+1. use this `curl` command to run the `list` endpoint
+
+## Clean up
+This section shows how to undo the deployment of the application
+1. Make sure your AWS CLI is correctly connected to your AWS account
+2. Run this command:
+```
+aws cloudformation delete-stack --stack-name restapi-cloudformation
 ```
